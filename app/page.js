@@ -5,15 +5,18 @@ import TagFilter from "@/components/jobs/tag-filter";
 import { sanitizeJobData } from "@/lib/sanitize-job-data";
 
 export default async function Home() {
-  const baseUrl = process.env.VERCEL_URL
-    ? `https://${process.env.VERCEL_URL}`
-    : "http://localhost:3000";
+  const res = await fetch(`https://job-board-app.vercel.app/api/jobs/job`);
 
-  // Use the baseUrl in an API call
-  const res = await fetch(`${baseUrl}/api/jobs/job`);
+  if (!res.ok) {
+    const errorText = await res.text();
+    throw new Error(`API returned an error: ${errorText}`);
+  }
+
   const json = await res.json();
   const jobs = json.success ? json.jobs : [];
 
+  // Optionally, we can sanitize or transform the jobs data
+  // For example, you might call a function like sanitizeJobData(jobs)
   // Sanitize the jobs data before passing it to the client-side component
   const sanitizedJobs = sanitizeJobData(jobs);
 

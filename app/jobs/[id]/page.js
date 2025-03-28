@@ -5,12 +5,11 @@ export default async function JobDetail({ params }) {
   const resolvedParams = await params;
   const { id } = resolvedParams;
 
-  const baseUrl = process.env.VERCEL_URL
-    ? `https://${process.env.VERCEL_URL}`
-    : "http://localhost:3000";
-
-  // Use the baseUrl in an API call
-  const res = await fetch(`${baseUrl}/api/jobs/job/${id}`);
+  // Use fetch with a cache option to disable caching:
+  const res = await fetch(
+    `https://job-board-app.vercel.app/api/jobs/job/${id}`,
+    { cache: "no-store" }
+  );
 
   if (!res.ok) {
     return <p>Job not found.</p>;
