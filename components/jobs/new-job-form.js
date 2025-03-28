@@ -99,8 +99,12 @@ export default function NewJobForm() {
     });
     // console.log("Submitting FormData:", [...fd.entries()]);
 
+    const baseUrl = process.env.VERCEL_URL
+      ? `https://${process.env.VERCEL_URL}`
+      : "http://localhost:3000";
+
     // Send POST request to the API endpoint.
-    const res = await fetch(`https://job-board-app.vercel.app/api/jobs/job`, {
+    const res = await fetch(`${baseUrl}/api/jobs/job`, {
       method: "POST",
       body: fd,
     });
