@@ -100,7 +100,7 @@ export default function NewJobForm() {
     // console.log("Submitting FormData:", [...fd.entries()]);
 
     // Send POST request to the API endpoint.
-    const res = await fetch("/api/jobs/job", {
+    const res = await fetch(`https://job-board-app.vercel.app/api/jobs/job`, {
       method: "POST",
       body: fd,
     });

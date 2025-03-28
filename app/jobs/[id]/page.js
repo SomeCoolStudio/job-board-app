@@ -9,7 +9,10 @@ export default async function JobDetail({ params }) {
   const url = new URL(`/api/jobs/job/${id}`, baseUrl);
 
   // Use fetch with a cache option to disable caching:
-  const res = await fetch(`https://job-board-app.vercel.app/api/jobs/job`, { cache: "no-store" });
+  const res = await fetch(
+    `https://job-board-app.vercel.app/api/jobs/job/${id}`,
+    { cache: "no-store" }
+  );
 
   if (!res.ok) {
     return <p>Job not found.</p>;
