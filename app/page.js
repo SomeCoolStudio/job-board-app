@@ -2,7 +2,7 @@
 import HomeDescription from "@/components/home-page/home-description/home-description";
 import HomeMiddleButtons from "@/components/home-page/home-buttons/home-middle-buttons";
 import TagFilter from "@/components/jobs/tag-filter";
-import { sanitizeJobData } from "@/lib/sanitize-job-data";
+// import { sanitizeJobData } from "@/lib/sanitize-job-data";
 
 export default async function Home() {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL; // ensure this is set in your env
@@ -20,7 +20,7 @@ export default async function Home() {
   // Optionally, we can sanitize or transform the jobs data
   // For example, you might call a function like sanitizeJobData(jobs)
   // Sanitize the jobs data before passing it to the client-side component
-  const sanitizedJobs = sanitizeJobData(jobs);
+  // const sanitizedJobs = sanitizeJobData(jobs);
 
   // Optionally log the jobs
   // console.log("Jobs fetched:", jobs);
@@ -29,7 +29,7 @@ export default async function Home() {
     <main>
       <HomeDescription />
       <HomeMiddleButtons />
-      <TagFilter jobs={sanitizedJobs} />
+      <TagFilter jobs={jobs} />
     </main>
   );
 }
