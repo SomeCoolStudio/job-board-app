@@ -7,7 +7,7 @@ import TagFilter from "@/components/jobs/tag-filter";
 export default async function Home() {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 
-  const res = await fetch(`${baseUrl}/api/jobs/job`);
+  const res = await fetch(`${baseUrl}/api/jobs/job`, { cache: "no-store" });
 
   if (!res.ok) {
     const errorText = await res.text();
