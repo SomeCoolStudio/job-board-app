@@ -2,12 +2,17 @@
 import HomeDescription from "@/components/home-page/home-description/home-description";
 import HomeMiddleButtons from "@/components/home-page/home-buttons/home-middle-buttons";
 import TagFilter from "@/components/jobs/tag-filter";
-// import { sanitizeJobData } from "@/lib/sanitize-job-data";
+import { sanitizeJobData } from "@/lib/sanitize-job-data";
 
 export default async function Home() {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL; // ensure this is set correctly in your env
-  const url = new URL("/api/jobs/job", baseUrl);
-  const res = await fetch(url);
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+  const url = `${baseUrl}/api/jobs/job`;
+  const res = await fetch(url, { cache: "no-store" });
+
+  if (!res.ok) {
+    const errorText = await res.text();
+    throw new Error(`API returned an error: ${errorText}`);
+  }
 
   const json = await res.json();
   const jobs = json.success ? json.jobs : [];
