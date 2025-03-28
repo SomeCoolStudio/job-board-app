@@ -6,8 +6,8 @@ import TagFilter from "@/components/jobs/tag-filter";
 
 export default async function Home() {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
-  const url = `${baseUrl}/api/jobs/job`;
-  const res = await fetch(url);
+
+  const res = await fetch(`${baseUrl}/api/jobs/job`);
 
   if (!res.ok) {
     const errorText = await res.text();
