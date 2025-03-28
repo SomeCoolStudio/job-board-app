@@ -7,7 +7,7 @@ import { sanitizeJobData } from "@/lib/sanitize-job-data";
 export default async function Home() {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
   const url = `${baseUrl}/api/jobs/job`;
-  const res = await fetch(url, { cache: "no-store" });
+  const res = await fetch(url);
 
   if (!res.ok) {
     const errorText = await res.text();
