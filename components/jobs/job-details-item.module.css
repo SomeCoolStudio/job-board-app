@@ -1,0 +1,163 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 100vw;
+}
+
+.small-details-container {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  max-width: 1000px;
+  width: 80%;
+  margin: 0 auto 50px;
+}
+
+.small-details-container p {
+  background-color: #fde24f;
+  color: black;
+  font-size: 13px;
+  border-radius: 6px;
+  height: auto;
+  width: auto;
+  padding: 5px;
+  border: none;
+}
+
+.gray-banner-with-pseudo {
+  position: relative;
+  text-align: center;
+  color: white;
+  width: 100%; /* Ensures it spans the entire parent width */
+  max-width: none;
+}
+
+.gray-banner-with-pseudo::before {
+  content: "";
+  position: absolute;
+  top: 80px;
+  left: 0;
+  right: 0;
+  bottom: 35px;
+  background-color: whitesmoke;
+  z-index: -1;
+}
+
+.logo-image {
+  height: 64px;
+  width: 64px;
+  margin: 50px 0 20px 0;
+}
+
+.job-title {
+  font-weight: bolder;
+  font-size: 42px;
+  color: black;
+}
+
+.studio-name {
+  font-size: 20px;
+  margin-bottom: 50px;
+  color: black;
+}
+
+.horizontal-line {
+  width: 8%;
+  height: 1px;
+  background-color: #000000;
+  margin: 10px auto;
+}
+
+.addional-info-header,
+.middle-headers {
+  font-weight: bolder;
+  width: 80%;
+  max-width: 1000px;
+  margin: 10px auto;
+}
+
+.intro-paragraph,
+.addtional-info-paragraphs {
+  max-width: 1000px;
+  width: 80%;
+  margin: 0 auto 30px;
+  line-height: 1.4;
+}
+
+.post-date {
+  max-width: 1000px;
+  width: 80%;
+  margin: 20px auto 0;
+  line-height: 1.4;
+  font-size: 13px;
+}
+
+.bullet-list {
+  width: 80%;
+  max-width: 1000px;
+  line-height: 1.4;
+  margin: 0 auto;
+  padding-left: 40px;
+}
+
+.email-button {
+  /* outline: 2px solid rgb(23, 202, 23); */
+  background-color: var(--light-coral);
+  color: whitesmoke;
+  font-size: 16px;
+  font-weight: bolder;
+  border-radius: 6px;
+  height: 49px;
+  width: 230px;
+  border: none;
+  outline: 4px solid transparent;
+  transition: outline-color 0.4s ease-in-out;
+}
+
+.email-button:hover,
+.bottom-email-button:hover {
+  outline-color: rgba(247, 110, 122, 0.4);
+  cursor: pointer;
+}
+
+.bottom-email-button {
+  background-color: var(--light-coral);
+  color: whitesmoke;
+  font-size: 16px;
+  font-weight: bolder;
+  border-radius: 6px;
+  border: none;
+  position: relative;
+  top: 20px;
+  right: 8.5%;
+  height: 49px;
+  width: 230px;
+  outline: 4px solid transparent;
+  transition: outline-color 0.4s ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .job-title {
+    font-size: 32px;
+  }
+
+  .studio-name {
+    font-size: 18px;
+  }
+
+  .intro-paragraph,
+  .addtional-info-paragraphs,
+  .middle-headers,
+  .addional-info-header,
+  .bullet-list,
+  .post-date,
+  .small-details-container {
+    width: 90%;
+  }
+
+  .horizontal-line {
+    width: 20%;
+  }
+}

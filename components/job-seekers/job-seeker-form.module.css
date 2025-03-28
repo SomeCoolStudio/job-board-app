@@ -1,0 +1,58 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  text-align: center;
+  margin: 100px auto;
+}
+
+.email-container,
+.name-container {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.input-fields {
+  border-radius: 6px;
+  font-size: 40px;
+}
+
+.input-fields::placeholder {
+  font-size: 20px;
+  padding: 20px;
+}
+
+.submit-button {
+  background-color: var(--light-coral);
+  color: whitesmoke;
+  font-size: 36px;
+  font-weight: bolder;
+  border-radius: 6px;
+  height: auto;
+  width: auto;
+  padding: 15px 60px;
+  border: 4px solid transparent;
+  border-color: rgba(255, 255, 255, 0);
+  transition: transform 0.2s ease-in-out, border-color 0.4s ease-in-out,
+    border 0.4s ease-in-out;
+}
+
+.submit-button:hover,
+.button:hover {
+  border: 4px solid transparent;
+  border-color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.submit-button:disabled {
+  transition: none !important;
+  transform: none !important;
+  animation: none !important;
+  border: none !important;
+  color: rgba(255, 255, 255, 0.4);
+}

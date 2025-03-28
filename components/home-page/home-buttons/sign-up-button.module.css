@@ -1,0 +1,45 @@
+.container {
+  display: flex;
+  gap: 5px;
+  left: 0;
+  transition: transform 0.2s ease-in-out;
+}
+
+.button--sign-up {
+  gap: 12px;
+  font-size: 0.8em;
+  background-color: Transparent;
+  border: none;
+  text-decoration: underline;
+  text-decoration-color: rgb(255, 230, 117);
+  text-decoration-thickness: 1px;
+  text-shadow: #fc0 1px 3px 3px;
+  font-weight: bolder;
+  border-radius: 5px;
+  margin-left: 30px;
+  margin-top: 20px;
+}
+
+.container:hover,
+.button--sign-up {
+  transform: translateX(8px);
+  cursor: pointer;
+}
+
+.arrow {
+  text-shadow: #fc0 1px 2px 2px;
+  font-size: 20px;
+  font-weight: bolder;
+  align-self: center;
+  transform: translateX(8px);
+}
+
+@media (max-width: 390px) {
+  .arrow {
+    text-shadow: #fc0 1px 2px 2px;
+    font-size: 20px;
+    font-weight: bolder;
+    margin-top: 14px;
+    transform: translateX(8px);
+  }
+}

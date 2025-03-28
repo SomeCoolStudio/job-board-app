@@ -1,0 +1,35 @@
+.share-button {
+  background-color: var(--light-coral);
+  color: whitesmoke;
+  font-size: 16px;
+  font-weight: bolder;
+  border-radius: 6px;
+  height: 49px;
+  width: 70px;
+  margin: 10px;
+  border: none;
+  outline: 4px solid transparent;
+  transition: outline-color 0.4s ease-in-out;
+}
+
+.share-button:hover,
+.bottom-share-button:hover {
+  outline-color: rgba(247, 110, 122, 0.4); /* Adds the border outside */
+  cursor: pointer;
+}
+
+.bottom-share-button {
+  background-color: var(--light-coral);
+  color: whitesmoke;
+  font-size: 16px;
+  font-weight: bolder;
+  border-radius: 6px;
+  border: none;
+  position: relative;
+  top: 20px;
+  right: 5%;
+  height: 49px;
+  width: 70px;
+  outline: 4px solid transparent;
+  transition: outline-color 0.4s ease-in-out;
+}

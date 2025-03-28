@@ -1,0 +1,40 @@
+.container {
+  flex-wrap: wrap;
+  display: flex;
+  gap: 50px;
+  background-color: white;
+}
+
+.items {
+  list-style-type: none;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.items:hover {
+  color: gray;
+  cursor: pointer;
+}
+
+.button-item {
+  list-style-type: none;
+  font-size: 16px;
+}
+
+.button {
+  background-color: #00ebc7;
+  font-size: 16px;
+  font-weight: bolder;
+  border-radius: 6px;
+  height: 39px;
+  width: 130px;
+  border: 0;
+  outline: 4px solid transparent;
+  transition: transform 0.2s ease-in-out, outline-color 0.4s ease-in-out;
+}
+
+.button:hover {
+  outline-color: rgb(0, 235, 199, 0.4); /* Adds the border outside */
+  cursor: pointer;
+  transform: scale(1.2);
+}

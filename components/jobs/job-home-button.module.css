@@ -1,0 +1,39 @@
+.job-home-button {
+  font-size: 0.8em;
+  background-color: Transparent;
+  border: none;
+  padding-top: 5px;
+  transition: transform 0.2s ease-in-out;
+  margin: 20px auto 10px;
+}
+
+.job-home-button:hover {
+  cursor: pointer;
+  transform: translateX(-8px);
+}
+
+.container {
+  display: flex;
+  position: absolute;
+  width: 100%;
+}
+
+@media (min-width: 1234px) {
+  .container {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    right: 555px;
+    width: 100%;
+  }
+}
+@media (min-width: 340px) {
+  .job-home-button {
+    font-size: 0.8em;
+    background-color: Transparent;
+    border: none;
+    padding-top: 5px;
+    transition: transform 0.2s ease-in-out;
+    margin: 60px auto 10px;
+  }
+}

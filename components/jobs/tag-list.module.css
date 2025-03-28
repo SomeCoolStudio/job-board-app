@@ -1,0 +1,43 @@
+.button {
+  background-color: gold;
+  border: none;
+  color: black;
+  font-size: 12px;
+  border-radius: 6px;
+  height: 100%;
+  width: auto;
+  padding: 10px;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.selected {
+  background-color: #00214d;
+  color: whitesmoke;
+}
+
+@media (min-width: 1023px) {
+  .container {
+    display: flex;
+    gap: 10px;
+    margin: 50px auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: justify;
+    width: 1000px;
+    background-color: rgb(245, 245, 245);
+  }
+}
+
+@media (max-width: 1022px) {
+  .container {
+    display: flex;
+    gap: 10px;
+    margin: 20px auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 50px 110px;
+  }
+}

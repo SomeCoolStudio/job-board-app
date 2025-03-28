@@ -1,0 +1,38 @@
+.button--post-job:hover {
+  outline-color: rgb(0, 235, 199, 0.4); /* Adds the border outside */
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.button--post-job {
+  /* outline: 2px solid lime; */
+  font-size: 1em;
+  background-color: #00ebc7;
+  font-weight: bolder;
+  border-radius: 10px;
+  padding-right: 2em;
+  padding-left: 2em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  border: 0;
+  outline: 4px solid transparent;
+  transition: transform 0.2s ease-in-out, outline-color 0.4s ease-in-out;
+}
+
+@media (min-width: 1022px) {
+  .button--post-job {
+    /* outline: 2px solid lime; */
+    font-size: 1em;
+    background-color: #00ebc7;
+    font-weight: bolder;
+    border-radius: 10px;
+    padding-right: 2em;
+    padding-left: 2em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    border: 0;
+    margin-left: 330px;
+    outline: 4px solid transparent;
+    transition: transform 0.2s ease-in-out, outline-color 0.4s ease-in-out;
+  }
+}

@@ -1,0 +1,7 @@
+.light-gray-bg {
+  background-color: rgb(245, 245, 245);
+}
+
+.no-cursor {
+  cursor: default;
+}
