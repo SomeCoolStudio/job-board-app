@@ -15,7 +15,7 @@ export default async function Home() {
   // Optionally, we can sanitize or transform the jobs data
   // For example, you might call a function like sanitizeJobData(jobs)
   // Sanitize the jobs data before passing it to the client-side component
-  // const sanitizedJobs = sanitizeJobData(jobs);
+  const sanitizedJobs = sanitizeJobData(jobs);
 
   // Optionally log the jobs
   // console.log("Jobs fetched:", jobs);
@@ -24,7 +24,7 @@ export default async function Home() {
     <main>
       <HomeDescription />
       <HomeMiddleButtons />
-      <TagFilter jobs={jobs} />
+      <TagFilter jobs={sanitizedJobs} />
     </main>
   );
 }

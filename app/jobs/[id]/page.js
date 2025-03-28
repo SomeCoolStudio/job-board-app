@@ -5,7 +5,7 @@ export default async function JobDetail({ params }) {
   const resolvedParams = await params;
   const { id } = resolvedParams;
 
-  const res = await fetch(`http://localhost:3000/api/jobs/job/${id}`, {
+  const res = await fetch(`/api/jobs/job/${id}`, {
     cache: "no-store",
   });
   if (!res.ok) {
