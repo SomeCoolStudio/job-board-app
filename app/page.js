@@ -6,7 +6,7 @@ import TagFilter from "@/components/jobs/tag-filter";
 
 export default async function Home() {
   // Fetch jobs from your API route.
-  const res = await fetch("http://localhost:3000/api/jobs/job", {
+  const res = await fetch("/api/jobs/job", {
     cache: "no-store",
   });
   const json = await res.json();
