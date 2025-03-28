@@ -5,9 +5,12 @@ export default async function JobDetail({ params }) {
   const resolvedParams = await params;
   const { id } = resolvedParams;
 
-  const res = await fetch(`/api/jobs/job/${id}`, {
-    cache: "no-store",
-  });
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+  const url = new URL(`/api/jobs/job/${id}`, baseUrl);
+
+  // Use fetch with a cache option to disable caching:
+  const res = await fetch(url, { cache: "no-store" });
+
   if (!res.ok) {
     return <p>Job not found.</p>;
   }

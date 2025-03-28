@@ -5,10 +5,10 @@ import TagFilter from "@/components/jobs/tag-filter";
 // import { sanitizeJobData } from "@/lib/sanitize-job-data";
 
 export default async function Home() {
-  // Fetch jobs from your API route.
-  const res = await fetch("/api/jobs/job", {
-    cache: "no-store",
-  });
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL; // ensure this is set correctly in your env
+  const url = new URL("/api/jobs/job", baseUrl);
+  const res = await fetch(url);
+
   const json = await res.json();
   const jobs = json.success ? json.jobs : [];
 
