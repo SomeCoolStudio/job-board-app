@@ -97,13 +97,14 @@ export default function NewJobForm() {
         fd.append(key, value);
       }
     });
-    // console.log("Submitting FormData:", [...fd.entries()]);
 
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
     // Send POST request to the API endpoint.
-    const res = await fetch(`https://job-board-app.vercel.app/api/jobs/job`, {
+    const res = await fetch(`${baseUrl}/api/jobs/job`, {
       method: "POST",
       body: fd,
     });
+
     const data = await res.json();
     // console.log("Server response:", data);
     setResponseMessage(data.message);

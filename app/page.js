@@ -5,12 +5,14 @@ import TagFilter from "@/components/jobs/tag-filter";
 import { sanitizeJobData } from "@/lib/sanitize-job-data";
 
 export default async function Home() {
-  const res = await fetch(`https://job-board-app.vercel.app/api/jobs/job`);
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+  // Construct the API endpoint using the helper.
+  const res = await fetch(`${baseUrl}/api/jobs/job`);
 
-  if (!res.ok) {
-    const errorText = await res.text();
-    throw new Error(`API returned an error: ${errorText}`);
-  }
+  // if (!res.ok) {
+  //   const errorText = await res.text();
+  //   throw new Error(`API returned an error: ${errorText}`);
+  // }
 
   const json = await res.json();
   const jobs = json.success ? json.jobs : [];

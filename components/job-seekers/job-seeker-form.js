@@ -43,11 +43,13 @@ export default function NewJobSeekerForm() {
       fd.append(key, value);
     });
 
-    // Send a POST request to your API route (assume it's at /api/users/job-seeker)
-    const res = await fetch("/api/users/job-seeker", {
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+    // Send POST request to the API endpoint.
+    const res = await fetch(`${baseUrl}/api/users/job-seeker`, {
       method: "POST",
       body: fd,
     });
+
     const data = await res.json();
     setResponseMessage("🎉" + data.message + "🎉");
     setIsLoading(false);
