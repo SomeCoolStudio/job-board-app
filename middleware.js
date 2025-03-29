@@ -1,9 +1,8 @@
-// middleware.js
-import { withMiddlewareAuthRequired } from "@auth0/nextjs-auth0/edge";
+// import { withMiddlewareAuthRequired } from "@auth0/nextjs-auth0/edge";
 
-export default withMiddlewareAuthRequired();
+// export default withMiddlewareAuthRequired();
 
-// Apply to the /new-job route:
-export const config = {
-  matcher: ["/new-job"],
-};
+// // Apply to the /new-job route:
+// export const config = {
+//   matcher: ["/new-job"],
+// };
