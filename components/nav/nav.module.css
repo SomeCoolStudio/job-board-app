@@ -16,6 +16,30 @@
   cursor: pointer;
 }
 
+@media (max-width: 1222px) {
+  .items {
+    display: none;
+  }
+}
+
+@media (max-width: 715px) {
+  .items,
+  .login-logout {
+    display: none;
+  }
+}
+
+.login-logout {
+  list-style-type: none;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.login-logout:hover {
+  color: gray;
+  cursor: pointer;
+}
+
 .button-item {
   list-style-type: none;
   font-size: 16px;
@@ -30,7 +54,9 @@
   width: 130px;
   border: 0;
   outline: 4px solid transparent;
-  transition: transform 0.2s ease-in-out, outline-color 0.4s ease-in-out;
+  transition:
+    transform 0.2s ease-in-out,
+    outline-color 0.4s ease-in-out;
 }
 
 .button:hover {

@@ -40,7 +40,8 @@
 
 .box-2 {
   flex: 1;
-  max-width: 612px;
+  max-width: 40%;
+  width: 30%;
 }
 
 .image {
@@ -49,17 +50,14 @@
   object-fit: contain;
 }
 
-@media (min-width: 1233px) {
-  .box {
-    max-width: 612px;
-    margin-top: 90px;
-  }
+.box {
+  max-width: 50%;
+  width: 30%;
 }
-@media (max-width: 1233px) {
-  .box {
-    max-width: 300px;
-    margin-top: 90px;
-  }
+
+.buttons {
+  display: flex;
+  text-align: left;
 }
 
 @media (max-width: 900px) {

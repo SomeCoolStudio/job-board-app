@@ -16,12 +16,14 @@
   padding-bottom: 1em;
   border: 0;
   outline: 4px solid transparent;
-  transition: transform 0.2s ease-in-out, outline-color 0.4s ease-in-out;
+  transition:
+    transform 0.2s ease-in-out,
+    outline-color 0.4s ease-in-out;
 }
 
 @media (min-width: 1022px) {
   .button--post-job {
-    /* outline: 2px solid lime; */
+    width: auto;
     font-size: 1em;
     background-color: #00ebc7;
     font-weight: bolder;
@@ -31,8 +33,9 @@
     padding-top: 1em;
     padding-bottom: 1em;
     border: 0;
-    margin-left: 330px;
     outline: 4px solid transparent;
-    transition: transform 0.2s ease-in-out, outline-color 0.4s ease-in-out;
+    transition:
+      transform 0.2s ease-in-out,
+      outline-color 0.4s ease-in-out;
   }
 }

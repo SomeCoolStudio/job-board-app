@@ -14,7 +14,7 @@ export default function NavBar() {
         <li className={styles.items}>
           <Link href="/">About Us</Link>
         </li>
-        <li className={styles.items}>
+        <li className={styles["login-logout"]}>
           {user ? (
             <a href="/api/auth/logout">Logout</a>
           ) : (

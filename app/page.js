@@ -28,7 +28,7 @@ export default async function Home() {
   return (
     <main>
       <HomeDescription />
-      <HomeMiddleButtons />
+
       <TagFilter jobs={sanitizedJobs} />
     </main>
   );

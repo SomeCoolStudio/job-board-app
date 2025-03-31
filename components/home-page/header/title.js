@@ -11,7 +11,7 @@ export default function Title() {
         </Link>
       </section>
       <section className={styles["right-item"]}>
-        <div>
+        <div className={styles["right-contents"]}>
           <NavBar />
         </div>
       </section>

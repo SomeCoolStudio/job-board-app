@@ -1,24 +1,24 @@
 @media (max-width: 1021px) {
   .container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    transform: translateY(-220px);
+    margin: 100px 0;
   }
 }
 
 @media (min-width: 1022px) {
   .container {
     display: flex;
-    transform: translateY(-220px);
-    /* margin-left: 330px; */
+    flex-wrap: wrap;
+    justify-content: left;
+    margin: 100px 0;
   }
 }
 
 @media (max-width: 900px) {
   .container {
     display: flex;
-    transform: translateY(-90px);
     flex-wrap: wrap;
-    /* margin-left: 330px; */
   }
 }
