@@ -7,7 +7,7 @@ export default async function JobDetail({ params }) {
 
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
   // Use fetch with a cache option to disable caching:
-  const res = await fetch(`${baseUrl}}/api/jobs/job/${id}`);
+  const res = await fetch(`${baseUrl}/api/jobs/job/${id}`);
 
   if (!res.ok) {
     return <p>Job not found.</p>;

@@ -80,7 +80,7 @@ export default function JobDetailsItem({
         Additional Info
       </header>
       <p className={styles["addtional-info-paragraphs"]}>{extraJobDetails}</p>
-      <div>
+      <div className={styles["bottom-email-share-container"]}>
         <a href={`mailto:${email}`}>
           <button className={styles["bottom-email-button"]}>
             Apply to this Job
@@ -88,7 +88,6 @@ export default function JobDetailsItem({
         </a>
         <ShareButton styling={styles2["bottom-share-button"]} />
       </div>
-      <p className={styles["post-date"]}>Posted {formattedDate}</p>
     </main>
   );
 }

@@ -11,8 +11,16 @@
   font-size: 30px;
 }
 
-.right-contents {
-  justify-self: right;
+@media (min-width: 1222px) {
+  .right-contents {
+    justify-self: center;
+  }
+}
+
+@media (max-width: 1222px) {
+  .right-contents {
+    justify-self: right;
+  }
 }
 
 @media (min-width: 715px) {
@@ -20,7 +28,7 @@
   .left-item {
     max-width: 40%;
     width: 35%;
-    margin: 50px 0;
+    margin: 100px 0;
   }
 }
 

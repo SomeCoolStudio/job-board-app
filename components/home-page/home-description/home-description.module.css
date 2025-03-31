@@ -41,7 +41,6 @@
 .box-2 {
   flex: 1;
   max-width: 40%;
-  width: 30%;
 }
 
 .image {
@@ -50,9 +49,10 @@
   object-fit: contain;
 }
 
-.box {
-  max-width: 50%;
-  width: 30%;
+@media (min-width: 900px) {
+  .box {
+    width: 30%;
+  }
 }
 
 .buttons {
@@ -62,7 +62,7 @@
 
 @media (max-width: 900px) {
   .box {
-    max-width: 300px;
+    width: 70%;
     margin-top: 90px;
   }
 }

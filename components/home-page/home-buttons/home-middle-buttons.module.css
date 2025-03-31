@@ -1,13 +1,13 @@
-@media (max-width: 1021px) {
+@media (min-width: 1022px) {
   .container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: left;
     margin: 100px 0;
   }
 }
 
-@media (min-width: 1022px) {
+@media (max-width: 1021px) {
   .container {
     display: flex;
     flex-wrap: wrap;
@@ -20,5 +20,7 @@
   .container {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    margin: 100px auto;
   }
 }
