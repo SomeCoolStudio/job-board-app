@@ -1,3 +1,8 @@
+.container {
+  background-color: white;
+  padding: 150px;
+}
+
 .input-field {
   width: 612px;
   height: 62px;
@@ -42,12 +47,6 @@
 
 .bg {
   background-color: rgb(245, 245, 245);
-}
-
-.filler {
-  background-color: rgb(245, 245, 245);
-  height: 200px;
-  width: 100%;
 }
 
 .first-text {
@@ -99,7 +98,9 @@
   margin-top: 100px;
   border: 4px solid transparent;
   border-color: rgba(255, 255, 255, 0);
-  transition: transform 0.2s ease-in-out, border-color 0.4s ease-in-out,
+  transition:
+    transform 0.2s ease-in-out,
+    border-color 0.4s ease-in-out,
     border 0.4s ease-in-out;
 }
 
@@ -115,7 +116,9 @@
   margin: 10px;
   border: 4px solid transparent;
   border-color: rgba(255, 255, 255, 0);
-  transition: transform 0.2s ease-in-out, border-color 0.4s ease-in-out,
+  transition:
+    transform 0.2s ease-in-out,
+    border-color 0.4s ease-in-out,
     border 0.4s ease-in-out;
 }
 
