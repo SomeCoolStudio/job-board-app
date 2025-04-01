@@ -22,7 +22,7 @@ export default function NavBar() {
           )}
         </li>
         <li className={styles["button-item"]}>
-          <Link href="/new-job">
+          <Link href="/new-job" prefetch={false}>
             <button className={styles.button}>Post Job</button>
           </Link>
         </li>
