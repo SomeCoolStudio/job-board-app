@@ -2,16 +2,20 @@ import { withMiddlewareAuthRequired } from "@auth0/nextjs-auth0/edge";
 import { NextResponse } from "next/server";
 
 export default withMiddlewareAuthRequired((req) => {
-  // Check if it's a preflight request (OPTIONS) or a fetch request for RSC payload
-  const isPrefetch =
-    req.nextUrl.searchParams.has("_rsc") ||
-    (req.headers.get("Accept") &&
-      req.headers.get("Accept").includes("text/x-component"));
+  // Determine if this request is a preflight or an RSC prefetch
+  const secFetchMode = req.headers.get("sec-fetch-mode") || "";
 
-  if (req.method === "OPTIONS" || isPrefetch) {
+  if (
+    req.method === "OPTIONS" ||
+    req.nextUrl.searchParams.has("_rsc") ||
+    secFetchMode === "cors"
+  ) {
     const response = NextResponse.next();
-    // Set CORS headers so that the browser accepts the response
-    response.headers.set("Access-Control-Allow-Origin", "*");
+    // Set CORS headers for preflight responses if needed
+    response.headers.set(
+      "Access-Control-Allow-Origin",
+      req.headers.get("origin") || "*"
+    );
     response.headers.set("Access-Control-Allow-Methods", "GET,POST,OPTIONS");
     response.headers.set(
       "Access-Control-Allow-Headers",
@@ -19,8 +23,9 @@ export default withMiddlewareAuthRequired((req) => {
     );
     return response;
   }
-  // For all other requests, let the middleware do its default auth behavior.
-  // (Returning nothing means the default handling is applied.)
+
+  // For all other requests, proceed with the default auth behavior.
+  // Returning nothing will let the middleware do its job.
 });
 
 export const config = {
