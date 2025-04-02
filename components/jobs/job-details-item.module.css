@@ -41,7 +41,7 @@
   top: 80px;
   left: 0;
   right: 0;
-  bottom: 35px;
+  bottom: 65px;
   background-color: whitesmoke;
   z-index: -1;
 }
@@ -119,6 +119,7 @@
   border: none;
   outline: 4px solid transparent;
   transition: outline-color 0.4s ease-in-out;
+  transform: translateY(-30px);
 }
 
 .email-button:hover,

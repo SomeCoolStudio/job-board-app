@@ -9,6 +9,7 @@
   margin: 10px;
   border: none;
   outline: 4px solid transparent;
+  transform: translateY(-30px);
   transition: outline-color 0.4s ease-in-out;
 }
 
