@@ -1,6 +1,16 @@
 .container {
   background-color: white;
-  padding: 150px 0 200px 0;
+  padding: 150px 0 250px 0;
+}
+
+.tags-container {
+  display: flex;
+  gap: 10px;
+  margin: 50px auto;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: justify;
+  width: 50%;
 }
 
 .input-field {

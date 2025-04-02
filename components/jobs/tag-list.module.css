@@ -27,7 +27,6 @@
     justify-content: center;
     text-align: justify;
     width: 1000px;
-    background-color: white;
   }
 }
 
@@ -35,7 +34,6 @@
   .container {
     display: flex;
     gap: 10px;
-    margin: 20px auto;
     flex-wrap: wrap;
     justify-content: center;
     margin: 50px 110px;

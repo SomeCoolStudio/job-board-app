@@ -19,7 +19,7 @@ const availableTags = [
   "Writing",
 ];
 
-export default function TagList({ selectedTags, onToggleTag }) {
+export default function TagList({ selectedTags, onToggleTag, className }) {
   const handleTagClick = (tag, event) => {
     // console.log("Button className:", event.currentTarget.className);
     if (onToggleTag) {
@@ -28,7 +28,7 @@ export default function TagList({ selectedTags, onToggleTag }) {
   };
 
   return (
-    <div className={styles.container}>
+    <div className={className}>
       {availableTags.map((tag) => (
         <button
           key={tag}

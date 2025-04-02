@@ -2,6 +2,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import styles from "./tag-list.module.css";
 import TagList from "@/components/jobs/tag-list";
 import JobList from "@/components/jobs/job-list"; // Import the JobList component
 
@@ -39,7 +40,11 @@ const TagFilter = ({ jobs }) => {
   return (
     <div>
       {/* Render the TagList component and pass necessary props */}
-      <TagList selectedTags={selectedTags} onToggleTag={handleToggleTag} />
+      <TagList
+        selectedTags={selectedTags}
+        onToggleTag={handleToggleTag}
+        className={styles.container}
+      />
 
       {/* Render filtered job list */}
       <JobList jobs={filteredJobs} />

@@ -192,6 +192,7 @@ export default function NewJobForm() {
           <TagList
             selectedTags={formData.selectedTags}
             onToggleTag={handleToggleTag}
+            className={styles["tags-container"]}
           />
         </div>
         {formData.selectedTags.length > 0 && (
