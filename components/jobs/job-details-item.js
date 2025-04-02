@@ -52,6 +52,9 @@ export default function JobDetailsItem({
               Apply to this Job
             </button>
           </a>
+          <a href={`mailto:${email}`}>
+            <button className={styles["email-button-small"]}>Apply</button>
+          </a>
           <ShareButton styling={styles2["share-button"]} />
         </div>
       </div>
@@ -85,6 +88,9 @@ export default function JobDetailsItem({
           <button className={styles["bottom-email-button"]}>
             Apply to this Job
           </button>
+        </a>
+        <a href={`mailto:${email}`}>
+          <button className={styles["bottom-email-button-small"]}>Apply</button>
         </a>
         <ShareButton styling={styles2["bottom-share-button"]} />
       </div>
