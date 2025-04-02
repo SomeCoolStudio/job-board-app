@@ -9,10 +9,10 @@ export default function NavBar() {
     <nav>
       <ul className={styles.container}>
         <li className={styles.items}>
-          <Link href="/">Home</Link>
+          <a href="/">Home</a>
         </li>
         <li className={styles.items}>
-          <Link href="/">About Us</Link>
+          <a href="/">About Us</a>
         </li>
         <li className={styles["login-logout"]}>
           {user ? (

@@ -7,7 +7,7 @@ export default function JobList({ jobs }) {
     <ul className={styles["light-gray-bg"]}>
       {jobs.map((job) => (
         <li key={job._id.toString()}>
-          <Link
+          <a
             className={styles["no-cursor"]}
             href={`/jobs/${job._id.toString()}`}
           >
@@ -20,7 +20,7 @@ export default function JobList({ jobs }) {
               secondPartDescription={job.secondPartDescription}
               jobLocation={job.jobLocation}
             />
-          </Link>
+          </a>
         </li>
       ))}
     </ul>

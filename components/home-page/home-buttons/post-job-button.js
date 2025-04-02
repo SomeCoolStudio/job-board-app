@@ -3,8 +3,8 @@ import styles from "./post-job-button.module.css";
 
 export default function PostJobButton() {
   return (
-    <Link href="/new-job">
+    <a href="/new-job">
       <button className={styles["button--post-job"]}>Post A Job For $0</button>
-    </Link>
+    </a>
   );
 }

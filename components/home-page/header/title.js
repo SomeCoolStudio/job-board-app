@@ -6,9 +6,9 @@ export default function Title() {
   return (
     <main className={styles.container}>
       <section className={styles["left-item"]}>
-        <Link href="/">
+        <a href="/">
           <h2 className={styles.title}>Ranked Dev Jobs</h2>
-        </Link>
+        </a>
       </section>
       <section className={styles["right-item"]}>
         <div className={styles["right-contents"]}>
