@@ -39,11 +39,15 @@ export async function POST(request) {
       createdAt: new Date(),
     });
 
-    // console.log("Insert result:", insertResult);
+    // Log the insertedId for debugging.
+    console.log("Job inserted with ID:", insertResult.insertedId);
 
-    // Trigger email notification to all job seekers.
-    console.log("Calling sendJobNotification");
-    await sendJobNotification(result.data);
+    // Trigger email notification to all job seekers by fetching the full job data (with _id)
+    console.log(
+      "Calling sendJobNotification with insertedId:",
+      insertResult.insertedId
+    );
+    await sendJobNotification(insertResult.insertedId);
 
     return new Response(
       JSON.stringify({
