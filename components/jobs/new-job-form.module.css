@@ -1,15 +1,15 @@
 .container {
   background-color: white;
-  padding: 150px;
+  padding: 150px 0;
 }
 
 .input-field {
-  width: 612px;
   height: 62px;
   font-size: 20px;
   border-radius: 10px;
   margin: 20px;
   justify-content: center;
+  width: 30%;
 }
 
 .text-area {
@@ -17,7 +17,7 @@
   border-radius: 10px;
   margin: 20px;
   height: 200px;
-  width: 90%;
+  width: 60%;
   resize: none;
 }
 
@@ -50,31 +50,36 @@
 }
 
 .first-text {
+  position: relative;
+  outline: 2px solid red;
   text-align: center;
   opacity: 0;
   animation: fade-in 2s forwards;
   font-size: 30px;
-  height: 280px;
+  height: 100%;
   width: 100%;
 }
 
 .text-exit {
+  outline: 2px solid red;
+  left: 0;
   position: absolute;
-
   text-align: center;
   opacity: 0;
+  right: 0;
   animation: slide-up-fade-out 1s forwards;
   font-size: 30px;
-  height: 280px;
+  height: 100%;
   width: 100%;
 }
 
 .text {
+  outline: 2px solid red;
   text-align: center;
   opacity: 0;
   animation: slide-up-fade-in 1s forwards;
   font-size: 30px;
-  height: 280px;
+  height: 100%;
   width: 100%;
 }
 
@@ -165,23 +170,23 @@
 
 @keyframes slide-up-fade-in {
   from {
-    transform: translateY(400px);
+    transform: translate(0, 400px);
     opacity: 0;
   }
   to {
-    transform: translateY(0);
+    transform: translate(0, 0);
     opacity: 1;
   }
 }
 
 @keyframes slide-up-fade-out {
   from {
-    transform: translateY(0);
+    transform: translate(0, 0);
     opacity: 1;
   }
   to {
-    transform: translateY(-200px);
-    display: none;
+    transform: translate(0, -200px);
+
     opacity: 0;
   }
 }

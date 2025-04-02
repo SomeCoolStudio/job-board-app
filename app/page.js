@@ -7,7 +7,7 @@ import { sanitizeJobData } from "@/lib/sanitize-job-data";
 export default async function Home() {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
   // Construct the API endpoint using the helper.
-  const res = await fetch(`${baseUrl}/api/jobs/job`);
+  const res = await fetch(`${baseUrl}/api/jobs/job`, { cache: "no-store" });
 
   // if (!res.ok) {
   //   const errorText = await res.text();
