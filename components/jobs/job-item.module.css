@@ -16,6 +16,7 @@
   font-weight: bolder;
   text-align: left;
   width: auto;
+  color: black;
 }
 
 .first-part-text-box,
@@ -26,11 +27,13 @@
 .job-title {
   font-weight: bolder;
   width: auto;
+  color: black;
 }
 
 .job-location {
   font-weight: bolder;
   width: auto;
+  color: black;
 }
 
 @media (max-width: 580px) {
@@ -55,6 +58,7 @@
   .shortened-text {
     display: flex;
     justify-content: center;
+    color: black;
   }
 }
 
@@ -87,12 +91,14 @@
 @media (max-width: 1022px) {
   .shortened-text {
     font-size: 14px;
+    color: black;
   }
 }
 
 @media (max-width: 1022px) {
   .studio-name {
     text-align: center;
+    color: black;
   }
 }
 
@@ -100,6 +106,7 @@
   .studio-name,
   .shortened-text {
     font-size: 10px;
+    color: black;
   }
 }
 
@@ -107,6 +114,7 @@
   .studio-name,
   .really-shortened-text {
     font-size: 10px;
+    color: black;
   }
 }
 
@@ -114,6 +122,7 @@
   .studio-name {
     width: 70px;
     text-align: center;
+    color: black;
   }
 }
 
@@ -121,5 +130,6 @@
   .really-shortened-text {
     width: 70px;
     text-align: left;
+    color: black;
   }
 }
