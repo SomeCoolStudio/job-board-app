@@ -1,9 +1,11 @@
 "use client";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
 import styles from "./nav.module.css";
 import { useUser } from "@auth0/nextjs-auth0/client";
 
 export default function NavBar() {
+  const router = useRouter();
   const { user } = useUser();
   return (
     <nav>
@@ -22,9 +24,14 @@ export default function NavBar() {
           )}
         </li>
         <li className={styles["button-item"]}>
-          <a href="/new-job">
-            <button className={styles.button}>Post Job</button>
-          </a>
+          <button
+            className={styles.button}
+            onClick={() => {
+              router.push("/new-job");
+            }}
+          >
+            Post Job
+          </button>
         </li>
       </ul>
     </nav>
