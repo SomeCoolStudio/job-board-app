@@ -1,6 +1,6 @@
 .container {
   background-color: white;
-  padding: 150px 0;
+  padding: 150px 0 200px 0;
 }
 
 .input-field {
@@ -51,7 +51,6 @@
 
 .first-text {
   position: relative;
-  outline: 2px solid red;
   text-align: center;
   opacity: 0;
   animation: fade-in 2s forwards;
@@ -61,7 +60,6 @@
 }
 
 .text-exit {
-  outline: 2px solid red;
   left: 0;
   position: absolute;
   text-align: center;
@@ -74,7 +72,6 @@
 }
 
 .text {
-  outline: 2px solid red;
   text-align: center;
   opacity: 0;
   animation: slide-up-fade-in 1s forwards;
