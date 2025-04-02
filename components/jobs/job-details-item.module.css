@@ -73,6 +73,7 @@
 
 .addional-info-header,
 .middle-headers {
+  color: black;
   font-weight: bolder;
   width: 80%;
   max-width: 1000px;
@@ -81,6 +82,7 @@
 
 .intro-paragraph,
 .addtional-info-paragraphs {
+  color: black;
   max-width: 1000px;
   width: 80%;
   margin: 0 auto 30px;
@@ -88,6 +90,7 @@
 }
 
 .post-date {
+  color: black;
   max-width: 1000px;
   width: 80%;
   margin: 20px auto 0;
@@ -96,6 +99,7 @@
 }
 
 .bullet-list {
+  color: black;
   width: 80%;
   max-width: 1000px;
   line-height: 1.4;
@@ -142,10 +146,12 @@
 @media (max-width: 768px) {
   .job-title {
     font-size: 32px;
+    color: black;
   }
 
   .studio-name {
     font-size: 18px;
+    color: black;
   }
 
   .intro-paragraph,
@@ -156,6 +162,7 @@
   .post-date,
   .small-details-container {
     width: 90%;
+    color: black;
   }
 
   .horizontal-line {

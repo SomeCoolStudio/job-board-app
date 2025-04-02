@@ -7,6 +7,7 @@
 
 .button--sign-up {
   gap: 12px;
+  color: black;
   width: auto;
   font-size: 0.8em;
   background-color: Transparent;
@@ -29,6 +30,7 @@
 
 .arrow {
   text-shadow: #fc0 1px 2px 2px;
+  color: black;
   font-size: 20px;
   font-weight: bolder;
   align-self: center;
@@ -38,6 +40,7 @@
 @media (max-width: 390px) {
   .arrow {
     text-shadow: #fc0 1px 2px 2px;
+    color: black;
     font-size: 20px;
     font-weight: bolder;
     margin-top: 14px;

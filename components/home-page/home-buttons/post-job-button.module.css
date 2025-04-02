@@ -8,6 +8,7 @@
   /* outline: 2px solid lime; */
   font-size: 1em;
   background-color: #00ebc7;
+  color: black;
   font-weight: bolder;
   border-radius: 10px;
   padding-right: 2em;
@@ -26,6 +27,7 @@
     width: auto;
     font-size: 1em;
     background-color: #00ebc7;
+    color: black;
     font-weight: bolder;
     border-radius: 10px;
     padding-right: 2em;

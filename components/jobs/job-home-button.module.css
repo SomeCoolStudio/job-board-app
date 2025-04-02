@@ -1,5 +1,6 @@
 .job-home-button {
   font-size: 0.8em;
+  color: black;
   background-color: Transparent;
   border: none;
   padding-top: 5px;
@@ -29,6 +30,7 @@
 }
 @media (min-width: 340px) {
   .job-home-button {
+    color: black;
     font-size: 0.8em;
     background-color: Transparent;
     border: none;
